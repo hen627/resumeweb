@@ -1,0 +1,102 @@
+.Input{
+
+    // position: fixed;
+    // bottom: 0;
+    // display: flex;
+    // justify-content: center;
+    // width: 100%;
+    margin: 0;
+
+}
+
+.InputChatWrapper{
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 0px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+
+}
+
+.InputField{
+    border-radius: 1rem;
+    border: 0px;
+    height: 6rem;
+    width: fit-content;
+    min-width: 40rem;
+    background-color: rgb(14, 14, 14,0.9);
+    padding: 1rem;
+    outline: none;
+    max-width: 40rem;
+
+
+    
+}
+
+.ChatboxAI{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 1rem;
+    margin: auto;
+    max-width: 40rem;
+    min-width: 40rem;
+    padding: 0.5rem;
+    transform: translateX(-2rem);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.chatIMG{
+    border-radius: 1rem;
+    min-width: 4rem;
+    min-height: 4rem;
+    max-width: 4rem;
+    max-height: 4rem;
+    align-self: flex-start;
+    
+}
+
+.chatText{
+    margin: 0.5rem;
+    margin-left:2rem;
+    margin-right: 2rem;
+    text-align: left;
+    align-self: center;
+}
+
+.Chatboxuser{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    margin: auto;
+    max-width: 40rem;
+    min-width: 40rem;
+    padding: 0.5rem;
+    transform: translateX(2rem);
+
+
+}
+
+.InputButton{
+    border:0px;
+    border-radius: 1rem;
+    margin-left: -2.2rem;
+    background: none;
+    width: 2rem;
+    font-size: large;
+
+}
+
+.EnterButton:hover{
+
+    color: rgba(255, 255, 255, 0.5);
+
+}
+
+ 

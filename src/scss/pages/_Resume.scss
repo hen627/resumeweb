@@ -1,0 +1,87 @@
+.ResumeWrapper {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    max-width: fit-content;
+    margin: auto;
+    max-width: 60rem;
+    min-width: 40rem;
+    padding: 1rem;
+    padding-bottom: 2.5rem;
+
+}
+
+.MainWrapper {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+h1{
+    text-align: left;
+    margin: 0;
+
+}
+
+.Contact{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    border:0px;
+
+}
+.Section{
+    margin-top: -1rem;
+}
+
+// list-style-type: none
+.Contact>h3{
+    border:0px;
+    border-bottom: 1.5px;
+    border-style: solid;
+}
+
+.WorkPlace{
+    display: flex;
+    justify-content: space-between;
+}
+
+.WorkDescription{
+    text-align: left;
+    margin-top: -2.5rem;
+}
+
+.WorkDescription>p{
+    margin-left: 2rem;
+    margin-top: -0.5rem;
+    margin-right: 2rem;
+}
+
+.Esection{
+    text-align: left;
+    margin-bottom: -0.5rem;
+    margin-top: 2rem;
+    border:0px;
+    border-bottom: 1.5px;
+    border-style: solid;
+}
+
+.Education{
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -2.5rem;
+}
+
+.Skills{
+
+    display: flex;
+    margin-bottom: -2.5rem;
+    text-align: left;
+    align-items: center;
+}
+
+.Skills>p{
+    margin-left: 2rem;
+}

@@ -1,0 +1,25 @@
+.ProjectsFlex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    max-width: 60rem;
+    min-width: 40rem;
+    padding: 2rem;
+}
+
+.ProjectWrapper{
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 1rem;
+    width: 15rem;
+    height: 30rem;
+}
+
+.ProjectWrapper>img{
+    
+    max-width: 80%;
+    border-radius: 1rem;
+    width: 10rem;
+}
