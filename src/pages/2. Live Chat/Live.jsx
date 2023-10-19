@@ -9,7 +9,7 @@ import HeaderComponent from '../../components/Header/HeaderComponent';
 
 const LiveChat = () => {
   const [userInput, setUserInput] = useState('');
-  const [responses, setResponses] = useState([{ role: 'assistant', content: "Ask me anything. Please do note that the requests take a bit of time due to the multiple api calls handled by aws."}]);
+  const [responses, setResponses] = useState([{ role: 'assistant', content: "Ask me anything. Please do note that the requests take a bit of time due to the multiple api calls handled by aws, and message history is not saved so the ai will not remember requests (Api cost saving measure). "}]);
   const [isLoading, setIsLoading] = useState(false);
 
   const handleUserInput = (e) => {
@@ -31,7 +31,7 @@ const LiveChat = () => {
       setUserInput('');
       setIsLoading(true);
 
-      const apiResponse = await fetch('https://v4d5tmwivq4mnpd3mcr67ha3ne0buyur.lambda-url.eu-north-1.on.aws/', {
+      const apiResponse = await fetch('https://0zwmjho6a8.execute-api.eu-north-1.amazonaws.com/prod/question', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
