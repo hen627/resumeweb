@@ -3,7 +3,7 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 1rem;
     max-width: fit-content;
     margin: auto;
@@ -20,4 +20,16 @@
 .AboutWrapper>p{
     margin-left: 2rem;
     margin-right: 2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .AboutWrapper {
+
+        max-width: fit-content;
+        margin: auto;
+        min-width: 20rem;
+    
+    }
+
 }

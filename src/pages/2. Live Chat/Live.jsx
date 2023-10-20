@@ -9,8 +9,9 @@ import HeaderComponent from '../../components/Header/HeaderComponent';
 
 const LiveChat = () => {
   const [userInput, setUserInput] = useState('');
-  const [responses, setResponses] = useState([{ role: 'assistant', content: "Ask me anything. Please note that the requests take a bit of time due to the multiple api calls handled by aws, also message history is not saved so the ai will not remember previous responses (Api cost saving measure). "}]);
+  const [responses, setResponses] = useState([{ role: 'assistant', content: "Ask virtual Henry anything. Please note that the requests take a bit of time due to the multiple api calls handled by aws, also message history is not saved so the ai will not remember previous responses (Api cost saving measure). "}]);
   const [isLoading, setIsLoading] = useState(false);
+  const [messageCounter, setMessageCounter] = useState(0);
 
   const handleUserInput = (e) => {
     setUserInput(e.target.value);
@@ -22,10 +23,8 @@ const LiveChat = () => {
         return;
       }
 
-      // Clear responses array
       setResponses([]);
-
-      // Add user message to the responses array
+      setMessageCounter(messageCounter + 1);
       setResponses((prevResponses) => [...prevResponses, { role: 'user', content: userInput }]);
 
       setUserInput('');
@@ -43,7 +42,6 @@ const LiveChat = () => {
 
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
-      // Add assistant message to the responses array
       setResponses((prevResponses) => [...prevResponses, { role: 'assistant', content: data.chatresult[0].message.content }]);
     } catch (error) {
       console.error('Error sending message:', error);
@@ -62,9 +60,9 @@ const LiveChat = () => {
             {responses.map((message, index) => (
               <div key={index}>
                 {message.role === 'user' ? (
-                  <ChatboxUser text={message.content} />
+                  <ChatboxUser text={message.content} key={`user-${messageCounter} `} />
                 ) : (
-                  <ChatboxAI text={message.content} delay={20} />
+                  <ChatboxAI text={message.content} key={`assistant-${messageCounter} `}  />
                 )}
               </div>
             ))}
@@ -73,7 +71,7 @@ const LiveChat = () => {
 
         {isLoading && (
           <div>
-            <ChatboxAI text='' delay={20} isLoading={isLoading} />
+            <ChatboxAI text='' delay={20} isLoading={isLoading} key={`assistant-${messageCounter} `} />
           </div>
         )}
 

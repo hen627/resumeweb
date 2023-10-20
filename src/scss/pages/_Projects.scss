@@ -9,7 +9,7 @@
 }
 
 .ProjectWrapper{
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 1rem;
     margin: 1rem;
     padding: 1rem;
@@ -22,4 +22,13 @@
     max-width: 80%;
     border-radius: 1rem;
     width: 10rem;
+}
+
+@media only screen and (max-width: 1000px) {
+    
+    .ProjectsFlex{
+
+        min-width: 20rem;
+
+    }
 }

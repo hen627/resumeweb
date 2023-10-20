@@ -3,6 +3,7 @@ import tempAIpicture from '../../assets/tempAIpicture.png';
 
 const ChatboxAI = ({ text, delay, isLoading }) => {
   const [currentText, setCurrentText] = useState('');
+  const [isLoadingState, setIsLoadingState] = useState(true);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [dots, setDots] = useState(0);
 
@@ -20,21 +21,21 @@ const ChatboxAI = ({ text, delay, isLoading }) => {
 
   useEffect(() => {
     if (!isLoading) {
-      setDots(0);
-      setCurrentText(text);
+      setIsLoadingState(false); // Transition from loading to response
+      setCurrentIndex(0);
     }
-  }, [isLoading, text]);
+  }, [isLoading]);
 
   useEffect(() => {
-    if (currentIndex < text.length && isLoading) {
+    if (currentIndex < text.length && !isLoadingState) {
       const timeout = setTimeout(() => {
         setCurrentText((prevText) => prevText + text[currentIndex]);
         setCurrentIndex((prevIndex) => prevIndex + 1);
-      }, delay);
+      }, 10);
 
       return () => clearTimeout(timeout);
     }
-  }, [currentIndex, delay, text, isLoading]);
+  }, [currentIndex, delay, text, isLoadingState]);
 
   return (
     <div className='ChatboxAI'>

@@ -1,5 +1,5 @@
 .ResumeWrapper {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.7);
     border-radius: 1rem;
     max-width: fit-content;
     margin: auto;
@@ -84,4 +84,20 @@ h1{
 
 .Skills>p{
     margin-left: 2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .ResumeWrapper {
+        background-color: rgba(0, 0, 0, 0.7);
+        border-radius: 1rem;
+        max-width: 60rem;
+        min-width: 10rem;
+        margin: auto;
+
+        padding: 1rem;
+        padding-bottom: 2.5rem;
+    
+    }
+    
 }

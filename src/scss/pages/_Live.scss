@@ -26,18 +26,18 @@
     height: 6rem;
     width: fit-content;
     min-width: 40rem;
-    background-color: rgb(14, 14, 14,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     padding: 1rem;
     outline: none;
     max-width: 40rem;
-
+    color: white;
 
     
 }
 
 .ChatboxAI{
     display: flex;
-    align-items: flex-start;
+    align-content: flex-start;
     justify-content: flex-start;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 1rem;
@@ -48,7 +48,50 @@
     transform: translateX(-2rem);
     margin-top: 1rem;
     margin-bottom: 1rem;
+
 }
+
+.ChatboxAI, .ChatboixAI span {
+    animation-duration: 1s;
+}
+
+.ChatboxAI { animation-name: ChatboxAI }
+@keyframes ChatboxAI {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+
+
+.Chatboxuser, .Chatboxuser span {
+    animation-duration: 1s;
+}
+
+
+.Chatboxuser { animation-name: Chatboxuser }
+@keyframes Chatboxuser {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to { opacity: 1 }
+}
+
+
+.remove-fade {
+    animation-name: ChatboxRemove;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes ChatboxRemove {
+    to {
+      opacity: 0;
+      transform: translateY(-100%); /* Move the message upwards while fading out */
+    }
+  }
+
 
 .chatIMG{
     border-radius: 1rem;
@@ -57,7 +100,6 @@
     max-width: 4rem;
     max-height: 4rem;
     align-self: flex-start;
-    
 }
 
 .chatText{
@@ -90,6 +132,7 @@
     background: none;
     width: 2rem;
     font-size: large;
+    color: rgb(205, 205, 205);
 
 }
 
@@ -99,4 +142,25 @@
 
 }
 
+@media only screen and (max-width: 1000px) {
+
+    .Chatboxuser{
+        max-width: 28rem;
+        min-width: 28rem;
+
+    }
+
+    .ChatboxAI{
+
+        max-width: 28rem;
+        min-width: 28rem;
+
+    }
+    
+    .InputField{
+
+        width: fit-content;
+        min-width: 30rem;
+    }
+}
  
